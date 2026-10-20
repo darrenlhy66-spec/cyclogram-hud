@@ -36,7 +36,7 @@ st.markdown("""
         font-size: 1.15rem !important;
     }
     
-    /* Bold text for bullet readouts */
+    /* Cyan text for bullet readouts */
     li {
         font-weight: 500 !important;
         color: #b0e0e6 !important;
@@ -99,9 +99,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- SECTION 4: CONTROL RULES ---
-st.markdown("<h3 style='color: #ff0055 !important; text-shadow: 0 0 10px rgba(255,0,85,0.6);'>⚠️ Control Rules</h3>", unsafe_allow_html=True)
+st.markdown("<h3>⚠️ Control Rules</h3>", unsafe_allow_html=True)
 st.markdown("""
-* <span style='color: #ffb3c6;'>**1. All procedural steps considered before execution.**</span>
-* <span style='color: #ffb3c6;'>**2. Check all variables with awareness.**</span>
-* <span style='color: #ffb3c6;'>**3. Be Ready and informed or SKIP setup.**</span>
+* **1. All procedural steps considered before execution.**
+* **2. Check all variables with awareness.**
+* **3. Be Ready and informed or SKIP setup.**
 """, unsafe_allow_html=True)
