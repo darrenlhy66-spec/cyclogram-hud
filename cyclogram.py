@@ -76,7 +76,7 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 with st.container():
     st.markdown('<div class="hud-card">', unsafe_allow_html=True)
-    st.checkbox("1. Market Analysis (Structure + News Squawk) [CMA, VWAP Suite, Flow & Volume: RCR, Levels: LVM, Regime: ATR]", key="p1")
+    st.checkbox("1. Market Analysis (Market Structure + News Squawk) (Trends: CMA, VWAP Suite: VWS, Flow & Volume: RCR, Levels Momentum: LVM, Regime Classifier: ATR) Autocorrelations + Market Regime Classifier)", key="p1")
     st.checkbox("2. OHLC Zones Marked (Execute within zone only)", key="p2")
     st.checkbox("3. Indicator Stack (Vostok Proto: MTS + MRC)", key="p3")
     st.checkbox("4. Risk Telemetry Math", key="p4")
