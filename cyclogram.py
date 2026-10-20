@@ -100,4 +100,13 @@ with st.container():
     st.checkbox("1. Mandatory Execution Cooldown", key="po1")
     st.checkbox("2. Trade Logged in Risk Telemetry after resolved trade", key="po2")
     st.checkbox("3. Read Risk Telemetry Decision Science Station", key="po3")
-    st.markdown('</div>', unsafe_import_html=True) # Intentionally left for user confirmation or fixed if they copy-paste whole code. Let's make sure ALL are fixed.
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# --- SECTION 4: CONTROL RULES ---
+st.markdown("<h3 style='color: #ff0055 !important; text-shadow: 0 0 10px rgba(255,0,85,0.6);'>⚠️ Control Rules</h3>", unsafe_allow_html=True)
+with st.container():
+    st.markdown('<div class="control-card">', unsafe_allow_html=True)
+    st.checkbox("1. All procedural steps considered before execution.", key="c1")
+    st.checkbox("2. Check all variables with awareness.", key="c2")
+    st.checkbox("3. Be Ready and informed or SKIP setup.", key="c3")
+    st.markdown('</div>', unsafe_allow_html=True)
