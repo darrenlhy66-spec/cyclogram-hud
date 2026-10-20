@@ -4,14 +4,13 @@ import streamlit as st
 st.set_page_config(
     page_title="Cyclogram HUD",
     page_icon="🌌",
-    layout="centered", # Better for mobile portrait view
+    layout="centered", 
     initial_sidebar_state="collapsed"
 )
 
 # --- CYBERPUNK CUSTOM CSS ---
 st.markdown("""
 <style>
-    /* Dark Sci-Fi Background and Core Font Settings */
     @import url('https://googleapis.com');
     
     .stApp {
@@ -20,7 +19,6 @@ st.markdown("""
         font-family: 'Rajdhani', sans-serif;
     }
     
-    /* Neon Glow Headers */
     h1, h2, h3 {
         font-family: 'Orbitron', sans-serif !important;
         color: #00f0ff !important;
@@ -28,7 +26,6 @@ st.markdown("""
         letter-spacing: 2px;
     }
     
-    /* Cyber HUD Cards */
     .hud-card {
         background: rgba(5, 20, 26, 0.85);
         border-left: 4px solid #00f0ff;
@@ -41,25 +38,22 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
     
-    /* Control Rules Critical Card */
     .control-card {
         background: rgba(26, 5, 5, 0.5);
         border-left: 4px solid #ff0055;
-        border-top: 1px solid rgba(2ff, 0, 85, 0.2);
+        border-top: 1px solid rgba(255, 0, 85, 0.2);
         padding: 20px;
         border-radius: 0 12px 12px 0;
         margin-bottom: 20px;
         box-shadow: 0 4px 15px rgba(255, 0, 85, 0.1);
     }
     
-    /* Interactive Mobile Checkboxes Custom Style */
     .stCheckbox label {
         font-size: 1.15rem !important;
         font-weight: 500 !important;
         color: #b0e0e6 !important;
     }
     
-    /* Status Badge styling */
     .telemetry-badge {
         font-family: 'Orbitron', sans-serif;
         background: rgba(0, 240, 255, 0.1);
@@ -72,7 +66,7 @@ st.markdown("""
         margin-bottom: 10px;
     }
 </style>
-""", unsafe_import_html=True)
+""", unsafe_allow_html=True)
 
 # --- HEADER SECTION ---
 st.markdown("<h1>CYCLOGRAM</h1>", unsafe_import_html=True)
