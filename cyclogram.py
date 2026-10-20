@@ -43,32 +43,18 @@ st.markdown("""
     }
     
     /* Standardized clean unbold text styling across all elements */
-    p, span, label, li {
+    p, span, label {
         font-family: 'Rajdhani', sans-serif !important;
         font-size: 1.15rem !important;
         font-weight: 400 !important;
     }
     
-    /* Clean custom unbold list item structure */
-    ul {
-        list-style-type: none;
-        padding-left: 0rem;
-        margin-top: 0.5rem;
-    }
-    
-    li {
-        position: relative;
-        padding-left: 1.2rem;
+    /* Clean vertical alignment rows replacing HTML bullet containers */
+    .hud-row {
         color: #b0e0e6 !important;
         margin-bottom: 8px;
-    }
-    
-    /* Custom clean list dot */
-    li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #b0e0e6;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
     }
 
     /* Telemetry Status Badge Base Layout */
@@ -113,33 +99,28 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 # --- SECTION 1: PRE-MARKET ANALYSIS ---
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 
-# Labels text database mapping
 label1 = "1. Market Analysis (Market Structure + News Squawk) (Trends: CMA, VWAP Suite: VWS, Flow & Volume: RCR, Levels Momentum: LVM, Regime Classifier: ATR) Autocorrelations + Market Regime Classifier)"
 label2 = "2. OHLC Zones Marked (Execute within zone only)"
 label3 = "3. Indicator Stack (Vostok Proto: MTS + MRC)"
 label4 = "4. Risk Telemetry Math"
 label5 = "5. Psychological-Physiological Support Station"
 
-# Helper generator handling inline evaluation styles mapping cleanly
 def render_cyber_toggle(label_text, unique_key):
-    # Selectbox dropdown targeting active states
     choice = st.selectbox(
         label_text, 
-        options=["[-] NEGATIVE", "[+] POSITIVE"], 
+        options=["[+] POSITIVE", "[-] NEGATIVE"], 
         index=0, 
         key=unique_key,
         label_visibility="collapsed"
     )
     
-    # Check conditional colors styling rules
     if choice == "[+] POSITIVE":
-        st.markdown(f"<p style='color: #00f0ff !important; margin-top: -10px; margin-bottom: 15px;'>{label_text} <span style='font-weight: 700 !important;'>[+]</span></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='color: #00f0ff !important; margin-top: -10px; margin-bottom: 15px;'>{label_text} <span style='font-weight: 700 !important; color: #00f0ff;'>[+]</span></p>", unsafe_allow_html=True)
         return True
     else:
-        st.markdown(f"<p style='color: #ff4444 !important; margin-top: -10px; margin-bottom: 15px;'>{label_text} <span style='font-weight: 700 !important;'>[-]</span></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='color: #ff4444 !important; margin-top: -10px; margin-bottom: 15px;'>{label_text} <span style='font-weight: 700 !important; color: #ff4444;'>[-]</span></p>", unsafe_allow_html=True)
         return False
 
-# Execute custom toggles components processing sequence
 s1 = render_cyber_toggle(label1, "s1_key")
 s2 = render_cyber_toggle(label2, "s2_key")
 s3 = render_cyber_toggle(label3, "s3_key")
@@ -155,29 +136,23 @@ else:
 # --- SECTION 2: DURING TRADE ---
 st.markdown("<h3>🎯 During Trade</h3>", unsafe_allow_html=True)
 st.markdown("""
-<ul>
-    <li>1. Candle closed 1:1 ➡️ Break Even Stop</li>
-    <li>2. One open position per trade</li>
-    <li>3. Cut position if necessary up to discretion</li>
-</ul>
+<p class="hud-row">1. Candle closed 1:1 ➡️ Break Even Stop</p>
+<p class="hud-row">2. One open position per trade</p>
+<p class="hud-row">3. Cut position if necessary up to discretion</p>
 """, unsafe_allow_html=True)
 
 # --- SECTION 3: POST-TRADE ---
 st.markdown("<h3>📊 Post-Trade</h3>", unsafe_allow_html=True)
 st.markdown("""
-<ul>
-    <li>1. Mandatory Execution Cooldown</li>
-    <li>2. Trade Logged in Risk Telemetry after resolved trade</li>
-    <li>3. Read Risk Telemetry Decision Science Station</li>
-</ul>
+<p class="hud-row">1. Mandatory Execution Cooldown</p>
+<p class="hud-row">2. Trade Logged in Risk Telemetry after resolved trade</p>
+<p class="hud-row">3. Read Risk Telemetry Decision Science Station</p>
 """, unsafe_allow_html=True)
 
 # --- SECTION 4: CONTROL RULES ---
 st.markdown("<h3>⚠️ Control Rules</h3>", unsafe_allow_html=True)
 st.markdown("""
-<ul>
-    <li>1. All procedural steps considered before execution.</li>
-    <li>2. Check all variables with awareness.</li>
-    <li>3. Be Ready and informed or SKIP setup.</li>
-</ul>
+<p class="hud-row">1. All procedural steps considered before execution.</p>
+<p class="hud-row">2. Check all variables with awareness.</p>
+<p class="hud-row">3. Be Ready and informed or SKIP setup.</p>
 """, unsafe_allow_html=True)
