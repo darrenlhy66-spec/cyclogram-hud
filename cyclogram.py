@@ -31,13 +31,20 @@ st.markdown("""
     }
     
     /* Clean custom look for standard text */
-    p, span, label {
+    p, span, label, li {
         font-family: 'Rajdhani', sans-serif !important;
+        font-size: 1.15rem !important;
+    }
+    
+    /* Bold text for bullet readouts */
+    li {
+        font-weight: 500 !important;
+        color: #b0e0e6 !important;
+        margin-bottom: 8px;
     }
 
     /* Style checkboxes directly without breaking layout containers */
     .stCheckbox label {
-        font-size: 1.15rem !important;
         font-weight: 500 !important;
         color: #b0e0e6 !important;
         padding-top: 5px;
@@ -77,18 +84,24 @@ st.checkbox("5. Psychological-Physiological Support Station", key="p5")
 
 # --- SECTION 2: DURING TRADE ---
 st.markdown("<h3>🎯 During Trade</h3>", unsafe_allow_html=True)
-st.checkbox("1. Candle closed 1:1 ➡️ Break Even Stop", key="d1")
-st.checkbox("2. One open position per trade", key="d2")
-st.checkbox("3. Cut position if necessary up to discretion", key="d3")
+st.markdown("""
+* **1. Candle closed 1:1 ➡️ Break Even Stop**
+* **2. One open position per trade**
+* **3. Cut position if necessary up to discretion**
+""", unsafe_allow_html=True)
 
 # --- SECTION 3: POST-TRADE ---
 st.markdown("<h3>📊 Post-Trade</h3>", unsafe_allow_html=True)
-st.checkbox("1. Mandatory Execution Cooldown", key="po1")
-st.checkbox("2. Trade Logged in Risk Telemetry after resolved trade", key="po2")
-st.checkbox("3. Read Risk Telemetry Decision Science Station", key="po3")
+st.markdown("""
+* **1. Mandatory Execution Cooldown**
+* **2. Trade Logged in Risk Telemetry after resolved trade**
+* **3. Read Risk Telemetry Decision Science Station**
+""", unsafe_allow_html=True)
 
 # --- SECTION 4: CONTROL RULES ---
 st.markdown("<h3 style='color: #ff0055 !important; text-shadow: 0 0 10px rgba(255,0,85,0.6);'>⚠️ Control Rules</h3>", unsafe_allow_html=True)
-st.checkbox("1. All procedural steps considered before execution.", key="c1")
-st.checkbox("2. Check all variables with awareness.", key="c2")
-st.checkbox("3. Be Ready and informed or SKIP setup.", key="c3")
+st.markdown("""
+* <span style='color: #ffb3c6;'>**1. All procedural steps considered before execution.**</span>
+* <span style='color: #ffb3c6;'>**2. Check all variables with awareness.**</span>
+* <span style='color: #ffb3c6;'>**3. Be Ready and informed or SKIP setup.**</span>
+""", unsafe_allow_html=True)
