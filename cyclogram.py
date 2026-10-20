@@ -26,7 +26,8 @@ st.markdown("""
         color: #00f0ff !important;
         text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
         letter-spacing: 2px;
-        margin-top: 2rem !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
     
     /* Clean custom look for standard text */
@@ -42,11 +43,28 @@ st.markdown("""
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
+    /* Telemetry Status Badge */
+    .telemetry-badge {
+        font-family: 'Orbitron', sans-serif;
+        background: rgba(0, 240, 255, 0.1);
+        border: 1px solid #00f0ff;
+        color: #00f0ff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # --- HEADER SECTION ---
 st.markdown("<h1>CYCLOGRAM</h1>", unsafe_allow_html=True)
+st.markdown("<div class='telemetry-badge'>SYSTEM STATUS: READY</div>", unsafe_allow_html=True)
 st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 
 # --- SECTION 1: PRE-MARKET ---
