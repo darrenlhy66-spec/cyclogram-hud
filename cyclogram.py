@@ -70,7 +70,6 @@ st.markdown("""
 
 # --- HEADER SECTION ---
 st.markdown("<h1>CYCLOGRAM</h1>", unsafe_allow_html=True)
-st.markdown("<div class='telemetry-badge'>SYSTEM STATUS: READY</div>", unsafe_allow_html=True)
 st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 
 # --- SECTION 1: PRE-MARKET ---
