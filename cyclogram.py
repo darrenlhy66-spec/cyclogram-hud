@@ -99,9 +99,9 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 # --- SECTION 1: PRE-MARKET ANALYSIS ---
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 
-label1 = "1. Lunokhod Sfera: Market Analysis | Market Regime"
+label1 = "1. Lunokhod Sfera: Market Analysis | Market Regime 
 label2 = "2. Molniya: Economics News Squawk"
-label3 = "3. Buran - MKF-6: OHLC Zones and Levels"
+label3 = "3. Buran | MKF-6: OHLC Zones and Levels"
 label4 = "4. Vostok: Indicators (MTS, MRC, MRD, MAS, Volume)"
 label5 = "5. Telemetry: Risk Math"
 label6 = "6. Psychological-Physiological Support Station"
@@ -127,9 +127,9 @@ s2 = render_cyber_toggle(label2, "s2_key")
 s3 = render_cyber_toggle(label3, "s3_key")
 s4 = render_cyber_toggle(label4, "s4_key")
 s5 = render_cyber_toggle(label5, "s5_key")
-s6 = render_cyber_toggle(label5, "s6_key")
+s6 = render_cyber_toggle(label6, "s6_key")
 
-# --- EXECUTE GATE STATUS LOGIC COUPLING ---
+# --- EXECUTE GATE STATUS LOGIC COUPLING (Requires all 6 to be positive) ---
 if s1 and s2 and s3 and s4 and s5 and s6:
     status_placeholder.markdown("<div class='telemetry-badge badge-ready'>SYSTEM STATUS: READY - POSITIVE</div>", unsafe_allow_html=True)
 else:
