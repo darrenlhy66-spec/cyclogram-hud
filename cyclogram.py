@@ -99,11 +99,12 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 # --- SECTION 1: PRE-MARKET ANALYSIS ---
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 
-label1 = "1. Lunokhod Sfera: Market Analysis, Market Regime, News Squawk"
-label2 = "2. Buran - MKF-6: OHLC Zones and Levels"
-label3 = "3. Vostok: Indicators (MTS, MRC, MRD, MAS, Volume)"
-label4 = "4. Telemetry: Risk Math"
-label5 = "5. Psychological-Physiological Support Station"
+label1 = "1. Lunokhod Sfera: Market Analysis | Market Regime"
+label2 = "2. Molniya: Economics News Squawk"
+label3 = "3. Buran - MKF-6: OHLC Zones and Levels"
+label4 = "4. Vostok: Indicators (MTS, MRC, MRD, MAS, Volume)"
+label5 = "5. Telemetry: Risk Math"
+label6 = "6. Psychological-Physiological Support Station"
 
 def render_cyber_toggle(label_text, unique_key):
     choice = st.selectbox(
