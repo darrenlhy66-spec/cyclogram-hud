@@ -99,7 +99,7 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 # --- SECTION 1: PRE-MARKET ANALYSIS ---
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 
-label1 = "1. Lunokhod Sfera: Market Analysis | Market Regime 
+label1 = "1. Lunokhod Sfera: Market Analysis | Market Regime"
 label2 = "2. Molniya: Economics News Squawk"
 label3 = "3. Buran | MKF-6: OHLC Zones and Levels"
 label4 = "4. Vostok: Indicators (MTS, MRC, MRD, MAS, Volume)"
