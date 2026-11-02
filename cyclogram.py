@@ -68,7 +68,7 @@ st.markdown("""
         margin-bottom: 15px;
     }
     
-    /* State: Ready (All 6 items positive) */
+    /* State: Ready (All 3 items positive) */
     .badge-ready {
         background: rgba(0, 240, 255, 0.1);
         border: 1px solid #00f0ff;
@@ -77,7 +77,7 @@ st.markdown("""
         box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
     }
 
-    /* State: Halt (5 or less items positive) */
+    /* State: Halt (2 or less items positive) */
     .badge-halt {
         background: rgba(255, 68, 68, 0.1);
         border: 1px solid #ff4444;
@@ -99,12 +99,9 @@ st.write("Pre-Market Analysis & Execution Gates protocol configuration.")
 # --- SECTION 1: PRE-MARKET ANALYSIS ---
 st.markdown("<h3>⚡ Pre-Market Analysis</h3>", unsafe_allow_html=True)
 
-label1 = "1. Lunokhod | Sfera: Market Analysis | Market Regime"
-label2 = "2. Molniya: Economics News Squawk"
-label3 = "3. Buran | Salyut Station - MKF-6M: OHLC Zones and Levels"
-label4 = "4. Vostok: Indicators (MTS, MRC, MRD, MAS, Volume)"
-label5 = "5. Telemetry: Risk Math"
-label6 = "6. Psychological-Physiological Support Station"
+label1 = "1. Market Structure & Market Regime (Lunokhod Sfera | Molniya)"
+label2 = "2. Zones/Levels & Indicator Timeframe Sensor (Buran MKF-6M | Vostok)"
+label3 = "3. Telemetry (Risk Telemetry | Psychological-Physiological Support Station)"
 
 def render_cyber_toggle(label_text, unique_key):
     choice = st.selectbox(
@@ -125,12 +122,9 @@ def render_cyber_toggle(label_text, unique_key):
 s1 = render_cyber_toggle(label1, "s1_key")
 s2 = render_cyber_toggle(label2, "s2_key")
 s3 = render_cyber_toggle(label3, "s3_key")
-s4 = render_cyber_toggle(label4, "s4_key")
-s5 = render_cyber_toggle(label5, "s5_key")
-s6 = render_cyber_toggle(label6, "s6_key")
 
-# --- EXECUTE GATE STATUS LOGIC COUPLING (Requires all 6 to be positive) ---
-if s1 and s2 and s3 and s4 and s5 and s6:
+# --- EXECUTE GATE STATUS LOGIC COUPLING (Requires all 3 to be positive) ---
+if s1 and s2 and s3:
     status_placeholder.markdown("<div class='telemetry-badge badge-ready'>SYSTEM STATUS: READY - POSITIVE</div>", unsafe_allow_html=True)
 else:
     status_placeholder.markdown("<div class='telemetry-badge badge-halt'>SYSTEM STATUS: HALT - NEGATIVE</div>", unsafe_allow_html=True)
